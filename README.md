@@ -10,7 +10,7 @@ Oppgaven er levert av følgende studenter:
 I oppgaven har vi hatt følgende arbeidsfordeling:
 * Nicole har hatt hovedansvar for ingen oppgaver. 
 * Jenny har hatt hovedansvar for ingen oppgaver 
-* Fatima har hatt hovedansvar for oppgave 7 og 8. 
+* Joachim har hatt hovedansvar for oppgave 7 9, og 9. 
 * Vi har i fellesskap løst oppgave 10. 
 
 # Oppgavebeskrivelse

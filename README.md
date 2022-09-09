@@ -2,7 +2,7 @@
 
 Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
 Oppgaven er levert av følgende studenter:
-* Jan Nicole, S362049, s362049@oslomet.no
+* Jan Nicole Yao, S362049, s362049@oslomet.no
 * ...
 
 # Arbeidsfordeling

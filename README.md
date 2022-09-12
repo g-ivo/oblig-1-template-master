@@ -3,6 +3,7 @@
 Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
 Oppgaven er levert av følgende studenter:
 * Jan Nicole Yao, S362049, s362049@oslomet.no
+* Joachim Ivo Di Mattia Martinsen s358995, s358995@oslomet.no
 * ...
 
 # Arbeidsfordeling

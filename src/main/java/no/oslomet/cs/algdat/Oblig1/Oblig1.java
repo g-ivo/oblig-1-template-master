@@ -41,45 +41,44 @@ public class Oblig1 {
 
         if (odde == a.length || par == a.length) {
             Arrays.sort(a,0,a.length);
-            System.exit(0); // Avslutter metoden siden arrayen er allerede sortert
-        }
+        } else {
+            // Lager indeks fra venstre og høyre
+            int venstre = 0, hoyre = a.length -1;
 
-        // Lager indeks fra venstre og høyre
-        int venstre = 0, hoyre = a.length -1;
+            // Antall oddetall
+            int k = 0;
 
-        // Antall oddetall
-        int k = 0;
-
-        while (venstre < hoyre) {
-            // Finner første partall som står på venstre siden
-            while (a[venstre] % 2 != 0) {
-                venstre++;
-                k++;
-            }
-
-            // Finner første oddetall som står på høyre siden
-            while (a[hoyre] % 2 == 0 && venstre < hoyre) {
-                hoyre--;
-            }
-
-            // Bytter partall som finnes til hæyre og oddetall til venstre
-            if (venstre < hoyre) {
-                if (hoyre == a.length-1 && a[hoyre] % 2 != 0 && a[venstre] % 2 != 0) {
+            while (venstre < hoyre) {
+                // Finner første partall som står på venstre siden
+                while (a[venstre] % 2 != 0) {
+                    venstre++;
                     k++;
-                    venstre = hoyre;
-                } else {
-                    int temp = a[venstre];
-                    a[venstre] = a[hoyre];
-                    a[hoyre] = temp;
+                }
+
+                // Finner første oddetall som står på høyre siden
+                while (a[hoyre] % 2 == 0 && venstre < hoyre) {
+                    hoyre--;
+                }
+
+                // Bytter partall som finnes til hæyre og oddetall til venstre
+                if (venstre < hoyre) {
+                    if (hoyre == a.length-1 && a[hoyre] % 2 != 0 && a[venstre] % 2 != 0) {
+                        k++;
+                        venstre = hoyre;
+                    } else {
+                        int temp = a[venstre];
+                        a[venstre] = a[hoyre];
+                        a[hoyre] = temp;
+                    }
                 }
             }
+
+            // Sorter oddetallene
+            Arrays.sort(a, 0, k);
+
+            // Sorter partallene
+            Arrays.sort(a, k,a.length);
         }
-
-        // Sorter oddetallene
-        Arrays.sort(a, 0, k);
-
-        // Sorter partallene
-        Arrays.sort(a, k,a.length);
     }
 
     ///// Oppgave 5 //////////////////////////////////////

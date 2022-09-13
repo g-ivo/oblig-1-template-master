@@ -3,6 +3,7 @@ package no.oslomet.cs.algdat.Oblig1;
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
 import java.lang.UnsupportedOperationException;
+import java.util.Arrays;
 
 public class Oblig1 {
     private Oblig1() {}
@@ -28,7 +29,37 @@ public class Oblig1 {
 
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
-        throw new UnsupportedOperationException();
+        // Lager indeks fra venstre og høyre
+        int venstre = 0, hoyre = a.length -1;
+
+        // Antall oddetall
+        int k = 0;
+
+        while (venstre < hoyre) {
+            // Finner først partall fra venstre siden
+            while (a[venstre] % 2 != 0) {
+                venstre++;
+                k++;
+            }
+
+            // Finner først oddetall fra høyre siden
+            while (a[hoyre] % 2 == 0 && venstre < hoyre) {
+                hoyre--;
+            }
+
+            // Bytter partall som finnes til venstre og oddetall til høyre
+            if (venstre < hoyre) {
+                int temp = a[venstre];
+                a[venstre] = a[hoyre];
+                a[hoyre] = temp;
+            }
+        }
+
+        // Sorter oddetallene
+        Arrays.sort(a, 0, k);
+
+        // Sorter partallene
+        Arrays.sort(a, k,a.length-1);
     }
 
     ///// Oppgave 5 //////////////////////////////////////

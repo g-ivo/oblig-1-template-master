@@ -25,3 +25,8 @@ er det så sorterer vi tabellen stigende og avslutter metoden. Hvis ikke så gå
 fra begge sider, venstre og høyre. Neste er å finne partall som ligger på venstre siden og oddetall som ligger
 på høyre siden også bytter vi om. Etter alle oddetallene ligger på venstre og alle partallene ligger på høyre,
 sorterer vi fra a[0] til antall oddetall som er k også sorterer vi fra k til siste verdi i tabellen.
+
+I oppgave 5 begynte vi med å sjekke om parametertabellen er tom eller inneholder bare en verdi. Hvis den er det
+gjør vi ingenting med tabellen og metoden er ferdig. Hvis ikke så går vi videre og flytter siste verdien til en
+hjelpevariabel. Deretter går vi gjennom hele tabellen med en for-løkke og flytter alle verdiene til høyre.
+Til slutt setter vi første verdien lik hjelpevariablen som er lik siste verdien av tabellen på starten.

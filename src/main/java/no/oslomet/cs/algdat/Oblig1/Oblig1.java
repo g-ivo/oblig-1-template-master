@@ -29,6 +29,21 @@ public class Oblig1 {
 
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
+        // Sjekker hvis arrayet inneholder bare partall eller oddetall
+        int odde = 0, par = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 != 0) {
+                odde++;
+            } else {
+                par++;
+            }
+        }
+
+        if (odde == a.length || par == a.length) {
+            Arrays.sort(a,0,a.length);
+            System.exit(0); // Avslutter metoden siden arrayen er allerede sortert
+        }
+
         // Lager indeks fra venstre og høyre
         int venstre = 0, hoyre = a.length -1;
 
@@ -36,22 +51,27 @@ public class Oblig1 {
         int k = 0;
 
         while (venstre < hoyre) {
-            // Finner først partall fra venstre siden
+            // Finner første partall som står på venstre siden
             while (a[venstre] % 2 != 0) {
                 venstre++;
                 k++;
             }
 
-            // Finner først oddetall fra høyre siden
+            // Finner første oddetall som står på høyre siden
             while (a[hoyre] % 2 == 0 && venstre < hoyre) {
                 hoyre--;
             }
 
-            // Bytter partall som finnes til venstre og oddetall til høyre
+            // Bytter partall som finnes til hæyre og oddetall til venstre
             if (venstre < hoyre) {
-                int temp = a[venstre];
-                a[venstre] = a[hoyre];
-                a[hoyre] = temp;
+                if (hoyre == a.length-1 && a[hoyre] % 2 != 0 && a[venstre] % 2 != 0) {
+                    k++;
+                    venstre = hoyre;
+                } else {
+                    int temp = a[venstre];
+                    a[venstre] = a[hoyre];
+                    a[hoyre] = temp;
+                }
             }
         }
 
@@ -59,7 +79,7 @@ public class Oblig1 {
         Arrays.sort(a, 0, k);
 
         // Sorter partallene
-        Arrays.sort(a, k,a.length-1);
+        Arrays.sort(a, k,a.length);
     }
 
     ///// Oppgave 5 //////////////////////////////////////

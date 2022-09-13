@@ -20,4 +20,8 @@ I oppgave 1 så gikk vi frem ved å ...
 
 I oppgave 2 så brukte vi en ... til å ...
 
-I oppgave 4 så 
+I oppgave 4 så gikk vi frem ved å først se om hele tabellen består av kun partall eller kun oddetall. Hvis det
+er det så sorterer vi tabellen stigende og avslutter metoden. Hvis ikke så går vi videre og går gjennom tabellen
+fra begge sider, venstre og høyre. Neste er å finne partall som ligger på venstre siden og oddetall som ligger
+på høyre siden også bytter vi om. Etter alle oddetallene ligger på venstre og alle partallene ligger på høyre,
+sorterer vi fra a[0] til antall oddetall som er k også sorterer vi fra k til siste verdi i tabellen.

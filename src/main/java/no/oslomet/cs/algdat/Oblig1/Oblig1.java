@@ -83,7 +83,12 @@ public class Oblig1 {
 
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
-        throw new UnsupportedOperationException();
+        char temp = a[a.length-1]; // flytter siste verdi til en hjelpevaribel
+
+        for (int i = a.length - 1; i > 0; i--) {
+            a[i] = a[i-1]; // flytter alle verdiene til høyre bortsett fra første verdien
+        }
+        a[0] = temp;
     }
 
     ///// Oppgave 6 //////////////////////////////////////

@@ -97,28 +97,54 @@ public class Oblig1 {
     public static void rotasjon(char[] a, int k) {
         int n = a.length; // forkortelse
         if (n > 1) {
-            // Hvis k er større enn lengden av arrayet skal vi trekker
-            // fra n opptil den er mindre enn n
-            while (k > n) {
-                k = k - n;
-            }
+            if (k > 0) {
+                // Hvis k er større enn lengden av arrayet skal vi trekker
+                // fra n opptil den er mindre enn n
+                while (k > n) {
+                    k = k - n;
+                }
 
-            // Lager en hjelpetabell av lengde k
-            char temp[] = new char[n - k];
+                // Lager en hjelpetabell av lengde k
+                char temp[] = new char[n - k];
 
-            // Kopierer første n-k verdier inn i hjelpetabellen
-            for (int i = 0; i < n - k; i++) {
-                temp[i] = a[i];
-            }
+                // Kopierer første n-k verdier inn i hjelpetabellen
+                for (int i = 0; i < n - k; i++) {
+                    temp[i] = a[i];
+                }
 
-            // Flytter resten av verdiene til indeksen 0 til k
-            for (int i = n - k; i < n; i++) {
-                a[i - n + k] = a[i];
-            }
+                // Flytter resten av verdiene til indeksen 0 til k
+                for (int j = n - k; j < n; j++) {
+                    a[j - n + k] = a[j];
+                }
 
-            // Kopierer hjelpetabell inn til parametertabellen
-            for (int i = 0; i < n - k; i++) {
-                a[i + k] = temp[i];
+                // Kopierer hjelpetabell inn til parametertabellen
+                for (int l = 0; l < n - k; l++) {
+                    a[l + k] = temp[l];
+                }
+            } else {
+                k *= -1; // Gjør om k til en positiv verdi
+
+                while (k > n) {
+                    k = k - n;
+                }
+
+                // Lager hjelpetabell med lengden k
+                char temp[] = new char[k];
+
+                // Kopierer første k element inn i hjelpetabellen
+                for (int i = 0; i < k; i++) {
+                    temp[i] = a[i];
+                }
+
+                // Flytter resten av verdiene til indeksen 0 til n-k
+                for (int j = k; j < n; j++) {
+                    a[j - k] = a[j];
+                }
+
+                // Kopierer hjelpetabellen inn i parametertabellen
+                for (int l = 0; l < k; l++) {
+                    a[l + n - k] = temp[l];
+                }
             }
         }
     }

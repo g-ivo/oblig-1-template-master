@@ -4,21 +4,37 @@ Denne oppgaven er en innlevering i Algoritmer og Datastrukturer.
 Oppgaven er levert av følgende studenter:
 * Jan Nicole Yao, S362049, s362049@oslomet.no
 * Joachim Ivo Di Mattia Martinsen s358995, s358995@oslomet.no
-* Jenny Hovland s364545, s364545@oslomet.no
+* Noor
 
 # Arbeidsfordeling
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
-* Jenny har hatt hovedansvar for oppgave 1 og 2.
-* Nicole har hatt hovedansvar for oppgave 3 og 4.
-* Joachim har hatt hovedansvar for oppgave 5 og 6.
-* Noor har hatt hovedansvar for oppgave 7 og 8.
-* Vi har i fellesskap løst oppgave 9 og 10. 
+* Jenny har hatt hovedansvar for oppgave 1, 2, 3.
+* Nicole har hatt hovedansvar for oppgave 4, 5, og 6.
+* Joachim har hatt hovedansvar for oppgave 7, 8 og 9. 
+* Vi har i fellesskap løst oppgave 10. 
 
 # Oppgavebeskrivelse
 
-I oppgave 1 så gikk vi frem ved å først identifisere hvilken form for sortering som passet best til å løse oppgaven. 
-Fant ut av at bubble sort er metoden som brukes til å sammenligne to tall om gangen og bytter plass om den andre er større enn den første. 
-Deretter var det bare å lage for-løkker for å starte prosjektet. 
+I oppgave 1 så gikk vi frem ved å ...
 
 I oppgave 2 så brukte vi en ... til å ...
+
+I oppgave 4 så gikk vi frem ved å først se om hele tabellen består av kun partall eller kun oddetall. Hvis det
+er det så sorterer vi tabellen stigende og avslutter metoden. Hvis ikke så går vi videre og går gjennom tabellen
+fra begge sider, venstre og høyre. Neste er å finne partall som ligger på venstre siden og oddetall som ligger
+på høyre siden også bytter vi om. Etter alle oddetallene ligger på venstre og alle partallene ligger på høyre,
+sorterer vi fra a[0] til antall oddetall som er k også sorterer vi fra k til siste verdi i tabellen.
+
+I oppgave 5 begynte vi med å sjekke om parametertabellen er tom eller inneholder bare en verdi. Hvis den er det
+gjør vi ingenting med tabellen og metoden er ferdig. Hvis ikke så går vi videre og flytter siste verdien til en
+hjelpevariabel. Deretter går vi gjennom hele tabellen med en for-løkke og flytter alle verdiene til høyre.
+Til slutt setter vi første verdien lik hjelpevariablen som er lik siste verdien av tabellen på starten.
+
+I oppgave 6 så gikk vi frem med å sjekke om tabellen har mer enn en verdi slik at vi får ingen feilsituasjon hvis
+det er det. Hvis det er ikke det så gikk vi frem og sjekke om k er positiv eller negativ. Hvis den er positiv 
+kopierer vi de k verdiene på slutten inn i en hjelpetabellen, så flytter vi resten av verdiene til høyre. Etterpå
+setter vi inn hjelpetabellen inn i forsiden av parametertabellen. Hvis k er negativ ganger vi det med -1 slik at
+k blir positiv også gjør nesten det samme som med positiv k, men isteden for å kopiere siste k verdier kopierer vi
+de første k verdier og flytter resten av elementene til venstre. Til slutt setter vi hjelpetabellen inn i slutten
+av parametertabellen.

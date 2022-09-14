@@ -3,12 +3,33 @@ package no.oslomet.cs.algdat.Oblig1;
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
 import java.lang.UnsupportedOperationException;
+import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class Oblig1 {
     private Oblig1() {}
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
+        if (a.length <= 0){
+            throw new NoSuchElementException("Tabellen er tom!");
+        }
+
+        int maksVerdi;
+        for(int i = 0; i < a.length; i++){
+            for (int j = 0; j < i ); j++){
+                if(a[j] > a[j + 1]){
+                    maksVerdi = a[j];
+                    a[j] = a[j + 1];
+                    a[a + 1] = maksVerdi;
+                }
+            }
+        }
+
+        for(int i = 0; i < a.length; i++){
+            System.out.print(a[i] + ", ");
+        }
+
         throw new UnsupportedOperationException();
     }
 
@@ -18,11 +39,43 @@ public class Oblig1 {
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
+        int antallForskjelligeVerdier = 0;
+
+        ArrayList<Integer> forskjelligeVerdier = new ArrayList<>();
+
+        for(int i = 0; i < a.length; i++){
+            if(!forskjelligeVerdier.contains(a[i])){
+                forskjelligeVerdier.add(a[i]);
+            }
+        }
+        if(forskjelligeVerdier.size()==1){
+            antallForskjelligeVerdier = 0;
+        } else {
+            antallForskjelligeVerdier = forskjelligeVerdier.size();
+        }
+        return antallForskjelligeVerdier;
+
         throw new UnsupportedOperationException();
     }
 
     ///// Oppgave 3 //////////////////////////////////////
     public static int antallUlikeUsortert(int[] a) {
+        int antallForskjelligeVerdier = 0;
+
+        ArrayList<Integer> forskjelligeVerdier = new ArrayList<>();
+
+        for(int i = 0; i < a.length; i++){
+            if(!forskjelligeVerdier.contains(a[i])){
+                forskjelligeVerdier.add(a[i]);
+            }
+        }
+        if(forskjelligeVerdier.size()==1){
+            antallForskjelligeVerdier = 0;
+        } else {
+            antallForskjelligeVerdier = forskjelligeVerdier.size();
+        }
+        return antallForskjelligeVerdier;
+
         throw new UnsupportedOperationException();
     }
 

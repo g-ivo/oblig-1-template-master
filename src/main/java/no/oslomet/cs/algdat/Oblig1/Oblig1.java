@@ -34,6 +34,25 @@ public class Oblig1 {
     }
 
     public static int ombyttinger(int[] a) {
+        if (a.length <= 0){
+            throw new NoSuchElementException("Tabellen er tom!");
+        }
+
+        var count = 0;
+        int maksVerdi;
+
+        for(int i = 0; i < a.length; i++){
+            for (int j = 0; j < i ); j++){
+                if(a[j] > a[j + 1]){
+                    maksVerdi = a[j];
+                    a[j] = a[j + 1];
+                    a[a + 1] = maksVerdi;
+                    count++;
+                }
+            }
+        }
+        return count;
+
         throw new UnsupportedOperationException();
     }
 

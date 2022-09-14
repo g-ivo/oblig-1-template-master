@@ -95,22 +95,26 @@ public class Oblig1 {
 
     ///// Oppgave 6 //////////////////////////////////////
     public static void rotasjon(char[] a, int k) {
-        // Lager en hjelpetabell med størrelse k
-        char temp[] = new char[k];
+        if (a.length > 1) {
+            // Lager en hjelpetabell med størrelse k
+            char temp[] = new char[k];
 
-        // Kopierer siste k element inn i hjelpetabellen
-        for (int i = a.length-1; i > a.length-k; i--) {
-            temp[i] = a[i];
-        }
+            int n = a.length-k; // hvor tabellen skal roteres
 
-        // Flytter resten av verdiene til indeks k til a.length-1
-        for (int i = k; i < a.length; i++) {
-            a[i+k] = a[i];
-        }
+            // Kopierer siste k element inn i hjelpetabellen
+            for (int i = 0; i < k; i++) {
+                temp[i] = a[n+i];
+            }
 
-        // Kopierer hjelpetabellen inni parametertabellen
-        for (int i = 0; i < k; i++) {
-            a[i] = temp[i];
+            // Flytter resten av verdiene til indeks k til a.length-1
+            for (int i = k; i < a.length; i++) {
+                a[i] = a[i-k];
+            }
+
+            // Kopierer hjelpetabellen inni parametertabellen
+            for (int i = 0; i < k; i++) {
+                a[i] = temp[i];
+            }
         }
     }
 

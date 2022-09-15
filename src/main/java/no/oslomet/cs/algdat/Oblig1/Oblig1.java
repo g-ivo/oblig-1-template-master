@@ -75,6 +75,21 @@ public class Oblig1 {
             return 0;
         }
 
+        var count2 = 1;
+        for (int i = 1; i < a.length; i++){
+            var unique = true;
+            for (int j = 0; j < i; j++){
+                if (a[i] == a[j]) {
+                    unique = false;
+                    break;
+                }
+            }
+            if (unique){
+                count2++;
+            }
+        }
+
+        return count2;
 
         throw new UnsupportedOperationException();
     }

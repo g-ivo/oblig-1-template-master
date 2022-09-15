@@ -236,12 +236,16 @@ public class Oblig1 {
 
         String string = new String(c); // omdanner arrayet til streng
         return string;
+
+
+        throw new UnsupportedOperationException();
     }
 
     /// 7b)
     public static String flett(String... s) {
+
         int n = 0;
-        if (s.length == 0) {
+        if (s.length == 0;) {
             n = 0;
         } else {
             n = s[0].length();
@@ -252,22 +256,7 @@ public class Oblig1 {
             }
         }
 
-        StringBuilder c = new StringBuilder();
-        int tell = 0;
-
-        while (tell < n) {
-            for (int i = 0; i <s.length; i++) {
-                char[] ord = s[i].toCharArray();
-                if (ord.length != 0) {
-                    for (int j = tell; j < s[i].length(); j++) {
-                        c.append(ord[j]);
-                        break;
-                    }
-                }
-            }
-            tell++;
-        }
-        return c.toString();
+        throw new UnsupportedOperationException();
     }
 
     ///// Oppgave 8 //////////////////////////////////////
@@ -309,11 +298,29 @@ public class Oblig1 {
 
     ///// Oppgave 10 //////////////////////////////////////
     public static int bokstavNr(char bokstav) {
+        //Ikke nødvendig? Oppgave 10 består tester.
         throw new UnsupportedOperationException();
     }
 
     public static boolean inneholdt(String a, String b) {
-        throw new UnsupportedOperationException();
+        var characterCountA = new int[256];
+        for (int i = 0; i < a.length(); i++){
+            var bokstav = a.charAt(i);
+            characterCountA[bokstav]++;
+        }
+
+        var characterCountB = new int[256];
+        for (int i = 0; i < b.length(); i++){
+            var bokstav = b.charAt(i);
+            characterCountB[bokstav]++;
+        }
+
+        for(int i = 0; i < characterCountA.length; i++){
+            if(characterCountB[i] < characterCountA[i]){
+                return false;
+            }
+        }
+        return true;
     }
 
 }  // Oblig1

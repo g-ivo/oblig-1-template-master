@@ -239,7 +239,17 @@ public class Oblig1 {
     /// 7b)
     public static String flett(String... s) {
         int n = 0;
-        return "";
+        if (s.length == 0;) {
+            n = 0;
+        } else {
+            n = s[0].length();
+            for (int i = 0; i < s.length; i++) {
+                if (n < s[i].length()) {
+                    n = s[i].length();
+                }
+            }
+        }
+        throw new UnsupportedOperationException();
     }
 
     ///// Oppgave 8 //////////////////////////////////////

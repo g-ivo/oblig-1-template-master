@@ -116,7 +116,12 @@ public class Oblig1 {
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
-        throw new UnsupportedOperationException();
+        // kode til oppgaven er hentet fra kompendium  avsnitt 1.3.11
+        char[] s1 = s.toCharArray(); // gjør om til et char-array
+        char[] t1 = s.toCharArray();
+
+        char[] c = new char[s1.length + t1.length]; // opprettet tabell av riktig størrelse
+        int i = 0, j= 0, k = 0; // løkkevariabler
     }
 
     /// 7b)

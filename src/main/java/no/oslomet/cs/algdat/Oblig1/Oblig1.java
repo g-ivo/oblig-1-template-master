@@ -239,7 +239,7 @@ public class Oblig1 {
     /// 7b)
     public static String flett(String... s) {
         int n = 0;
-        if (s.length == 0;) {
+        if (s.length == 0) {
             n = 0;
         } else {
             n = s[0].length();
@@ -249,7 +249,20 @@ public class Oblig1 {
                 }
             }
         }
-        throw new UnsupportedOperationException();
+
+        StringBuilder c = new StringBuilder();
+        int tell = 0;
+
+        while (tell < n) {
+            for (int i = 0; i <s.length; i++) {
+                char[] ord = s[i].toCharArray();
+                if (ord.length != 0) {
+                    for (int j = tell; j < s[i].length(); j++) {
+
+                    }
+                }
+            }
+        }
     }
 
     ///// Oppgave 8 //////////////////////////////////////

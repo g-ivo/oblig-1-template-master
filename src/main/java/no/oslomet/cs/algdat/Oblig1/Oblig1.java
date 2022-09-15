@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Random;
-import static java.lang.Math.abs;
 
 public class Oblig1 {
     private Oblig1() {}
@@ -46,6 +45,28 @@ public class Oblig1 {
         }
 
         return count;
+
+        /*
+        a) Når blir det flest ombyttinger?: Det blir flest ombyttinger når en tabell er usortert og desto nærmere det
+        største tallet er å stå fremst i tabellen. En usortert tabell kan ha det største tallet hvor som helst i rekken
+        og er derfor alltid flere ombyttinger enn 1 eller 0.
+        b) Når blir det færrest?: Det blir færrest ombyttinger når en tabell er sortert i stigende rekkefølge og si det
+        siste tallet står sist eller nest sist. Det er derfor ikke nødvendig med ombyttinger og blir derfor færrest i
+        en sortert tabell.
+        c) Hvor mange blir det i gjennomsnitt?: Hn ≈ log(n) + 0,577 er formelen for å finne det harmoniske tallet som
+        brukes for å finne gjennomsnittet Hn-1.
+
+        var array1 = new int[] {9, 2, 6, 4, 7, 3, 1, 5, 8};
+        maks(array1);
+
+        var array2 = new int[] {4, 1, 3, 5, 6, 7, 8, 2, 9};
+        maks(array2);
+
+        var array3 = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        maks(array3);
+
+         */
+
     }
 
     ///// Oppgave 2 //////////////////////////////////////
@@ -260,22 +281,14 @@ public class Oblig1 {
     }
 
     ///// Oppgave 8 //////////////////////////////////////
-
     public static int[] indekssortering(int[] a) {
-
+        throw new UnsupportedOperationException();
     }
 
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
-        int n = a.length;
-
-        if (a.length < 3) {
-            throw  new IllegalArgumentException("a.length("+a.length+")<3!");
-        }
         throw new UnsupportedOperationException();
     }
-
-
 
     ///// Oppgave 10 //////////////////////////////////////
     public static int bokstavNr(char bokstav) {

@@ -16,9 +16,15 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 
 # Oppgavebeskrivelse
 
-I oppgave 1 så gikk vi frem ved å ...
+I oppgave 1 så gikk vi frem ved å først lage en simpel NoSuchElementException som oppgaven etterspurte.
+Deretter gikk lagde vi en for løkke for å lage en sammenligning av to og to tall. Vi opplevde at det ikke fungerte først og
+måtte revurdere for-løkken. Det gikk ikke å lage to for-løkker og kom også fram til at det blir en veldig lang og lite effektiv kode.
+For å sjekke ombytting lagde vi først en vanlig maks-verdi kode, men rettet på å bruke den samme for-løkken som fra første del av oppg1.
 
-I oppgave 2 så brukte vi en ... til å ...
+I oppgave 2 så brukte vi en if statement for å sjekke om tallene har samme verdi. Vi la merke til at koden endrer på arrayet og må derfor revurdere.
+
+I oppgave 3 gikk vi fram ved å først bruke samme metode som i oppgave 2, men brukte litt tid på å skjønne hva man skal endre siden
+oppgave 3 inneholder et usortert array og ikke sortert. 
 
 I oppgave 4 så gikk vi frem ved å først se om hele tabellen består av kun partall eller kun oddetall. Hvis det
 er det så sorterer vi tabellen stigende og avslutter metoden. Hvis ikke så går vi videre og går gjennom tabellen

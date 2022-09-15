@@ -258,11 +258,14 @@ public class Oblig1 {
                 char[] ord = s[i].toCharArray();
                 if (ord.length != 0) {
                     for (int j = tell; j < s[i].length(); j++) {
-
+                        c.append(ord[j]);
+                        break;
                     }
                 }
             }
+            tell++;
         }
+        return c.toString();
     }
 
     ///// Oppgave 8 //////////////////////////////////////

@@ -24,8 +24,6 @@ public class Oblig1 {
         }
 
         return a[a.length - 1];
-
-        throw new UnsupportedOperationException();
     }
 
     public static int ombyttinger(int[] a) {
@@ -45,8 +43,6 @@ public class Oblig1 {
         }
 
         return count;
-
-        throw new UnsupportedOperationException();
     }
 
     ///// Oppgave 2 //////////////////////////////////////
@@ -90,8 +86,6 @@ public class Oblig1 {
         }
 
         return count2;
-
-        throw new UnsupportedOperationException();
     }
 
     ///// Oppgave 4 //////////////////////////////////////

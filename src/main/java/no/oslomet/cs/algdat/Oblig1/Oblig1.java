@@ -234,10 +234,14 @@ public class Oblig1 {
 
         String string = new String(c); // omdanner arrayet til streng
         return string;
+
+
+        throw new UnsupportedOperationException();
     }
 
     /// 7b)
     public static String flett(String... s) {
+
         int n = 0;
         if (s.length == 0;) {
             n = 0;
@@ -249,6 +253,7 @@ public class Oblig1 {
                 }
             }
         }
+
         throw new UnsupportedOperationException();
     }
 
@@ -264,7 +269,7 @@ public class Oblig1 {
 
     ///// Oppgave 10 //////////////////////////////////////
     public static int bokstavNr(char bokstav) {
-
+        //Ikke nødvendig? Oppgave 10 består tester.
         throw new UnsupportedOperationException();
     }
 

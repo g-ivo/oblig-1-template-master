@@ -21,7 +21,7 @@ Deretter gikk lagde vi en for løkke for å lage en sammenligning av to og to ta
 og måtte revurdere for-løkken. Det gikk ikke å lage to for-løkker og kom også fram til at det blir en veldig lang og 
 lite effektiv kode.For å sjekke ombytting lagde vi først en vanlig maks-verdi kode, men rettet på å bruke den samme 
 for-løkken som fra første del av oppg1. Endret på oppgaven ved å lage en mye mer effektiv for-løkke som brukte mange 
-færre inversjoner. Svarer også på de teoretiske spørsmålene her og i kildekoden:
+færre ombyttinger. Svarer også på de teoretiske spørsmålene her og i kildekoden:
 a) Når blir det flest ombyttinger?: Det blir flest ombyttinger når en tabell er usortert og desto nærmere det største 
 tallet er å stå først. En usortert tabell kan ha det største tallet hvor som helst i rekken og er derfor alltid 
 flere ombyttinger enn 1 eller 0.
@@ -67,4 +67,9 @@ I oppgave 8
 
 I oppgave 9
 
-I oppgave 10
+I oppgave 10 startet vi med å definere hver bokstav telling for både streng A og B. I dette utgangspunktet teller man 
+opp bokstavene etter hvor mange ganger de befinner seg i ordet. Dette fant vi ved å lage en for-løkke med en if 
+statement som sammenligner ordene. Ved hjelp av booleansk verdi returneres enten True eller False om man finner like 
+mange bokstaver av A og B i begge ordene. Vi opplevde at koden skrevet under "inneholdt" passerer alle testene og
+finner ikke bruk for bokstavNr. Har også testet på egenhånd og fått riktig True/False statements uten definering
+av bokstavNr/bokstav. 

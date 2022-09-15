@@ -104,44 +104,45 @@ public class Oblig1 {
 
             if (odde == a.length || par == a.length) {
                 Arrays.sort(a,0,a.length);
-            } else {
-                // Lager indeks fra venstre og høyre
-                int venstre = 0, hoyre = a.length -1;
+                System.exit(0); // Avslutter metoden siden arrayen er allerede sortert
+            }
 
-                // Antall oddetall
-                int k = 0;
+            // Lager indeks fra venstre og høyre
+            int venstre = 0, hoyre = a.length -1;
 
-                while (venstre < hoyre) {
-                    // Finner første partall som står på venstre siden
-                    while (a[venstre] % 2 != 0) {
-                        venstre++;
-                        k++;
-                    }
+            // Antall oddetall
+            int k = 0;
 
-                    // Finner første oddetall som står på høyre siden
-                    while (a[hoyre] % 2 == 0 && venstre < hoyre) {
-                        hoyre--;
-                    }
-
-                    // Bytter partall som finnes til hæyre og oddetall til venstre
-                    if (venstre < hoyre) {
-                        if (hoyre == a.length-1 && a[hoyre] % 2 != 0 && a[venstre] % 2 != 0) {
-                            k++;
-                            venstre = hoyre;
-                        } else {
-                            int temp = a[venstre];
-                            a[venstre] = a[hoyre];
-                            a[hoyre] = temp;
-                        }
-                    }
+            while (venstre < hoyre) {
+                // Finner første partall som står på venstre siden
+                while (a[venstre] % 2 != 0) {
+                    venstre++;
+                    k++;
                 }
 
-                // Sorter oddetallene
-                Arrays.sort(a, 0, k);
+                // Finner første oddetall som står på høyre siden
+                while (a[hoyre] % 2 == 0 && venstre < hoyre) {
+                    hoyre--;
+                }
 
-                // Sorter partallene
-                Arrays.sort(a, k,a.length);
+                // Bytter partall som finnes til hæyre og oddetall til venstre
+                if (venstre < hoyre) {
+                    if (hoyre == a.length-1 && a[hoyre] % 2 != 0 && a[venstre] % 2 != 0) {
+                        k++;
+                        venstre = hoyre;
+                    } else {
+                        int temp = a[venstre];
+                        a[venstre] = a[hoyre];
+                        a[hoyre] = temp;
+                    }
+                }
             }
+
+            // Sorter oddetallene
+            Arrays.sort(a, 0, k);
+
+            // Sorter partallene
+            Arrays.sort(a, k,a.length);
     }
 
     ///// Oppgave 5 //////////////////////////////////////
@@ -239,17 +240,7 @@ public class Oblig1 {
     /// 7b)
     public static String flett(String... s) {
         int n = 0;
-        if (s.length == 0;) {
-            n = 0;
-        } else {
-            n = s[0].length();
-            for (int i = 0; i < s.length; i++) {
-                if (n < s[i].length()) {
-                    n = s[i].length();
-                }
-            }
-        }
-        throw new UnsupportedOperationException();
+        return "";
     }
 
     ///// Oppgave 8 //////////////////////////////////////
@@ -264,11 +255,29 @@ public class Oblig1 {
 
     ///// Oppgave 10 //////////////////////////////////////
     public static int bokstavNr(char bokstav) {
+
         throw new UnsupportedOperationException();
     }
 
     public static boolean inneholdt(String a, String b) {
-        throw new UnsupportedOperationException();
+        var characterCountA = new int[256];
+        for (int i = 0; i < a.length(); i++){
+            var bokstav = a.charAt(i);
+            characterCountA[bokstav]++;
+        }
+
+        var characterCountB = new int[256];
+        for (int i = 0; i < b.length(); i++){
+            var bokstav = b.charAt(i);
+            characterCountB[bokstav]++;
+        }
+
+        for(int i = 0; i < characterCountA.length; i++){
+            if(characterCountB[i] < characterCountA[i]){
+                return false;
+            }
+        }
+        return true;
     }
 
 }  // Oblig1

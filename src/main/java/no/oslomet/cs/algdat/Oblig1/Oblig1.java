@@ -51,24 +51,23 @@ public class Oblig1 {
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
-        int antallForskjelligeVerdier = 0;
-
-        ArrayList<Integer> forskjelligeVerdier = new ArrayList<>();
-
-        for(int i = 0; i < a.length; i++){
-            if(!forskjelligeVerdier.contains(a[i])){
-                forskjelligeVerdier.add(a[i]);
+        for(int i = 1; i < a.length; i++){
+            if (a[i] < a[i - 1]){
+                throw new IllegalStateException("Ikke sortert!");
             }
         }
-        if(forskjelligeVerdier.size()==1){
-            antallForskjelligeVerdier = 0;
-        } else {
-            antallForskjelligeVerdier = forskjelligeVerdier.size();
-        }
-        return antallForskjelligeVerdier;
 
-        throw new UnsupportedOperationException();
-    }
+        if(a.length == 0){
+            return 0;
+        }
+
+        var count = 1;
+        for(int i = 1; i < a.length; i++){
+            if (a[i] != a[i - 1]){
+                count++;
+            }
+        }
+        return count;
 
     ///// Oppgave 3 //////////////////////////////////////
     public static int antallUlikeUsortert(int[] a) {

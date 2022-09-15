@@ -6,6 +6,8 @@ import java.lang.UnsupportedOperationException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
+import java.util.Random;
+import static java.lang.Math.abs;
 
 public class Oblig1 {
     private Oblig1() {}
@@ -269,14 +271,41 @@ public class Oblig1 {
     }
 
     ///// Oppgave 8 //////////////////////////////////////
+    private static void bytt(int[] a, int i, int j)
+    { int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp; }
+
     public static int[] indekssortering(int[] a) {
-        throw new UnsupportedOperationException();
+        int[] indeks = new int[a.length];
+        for (int i = 0; i <a.length ; i++) {
+            indeks[i]=i;
+        }
+
+        for (int i = 0; i < a.length-2; i++) {
+            for (int j = 0; j < indeks.length-2; j++) {
+                if (a[indeks[j]] > a[indeks[j+1]]){ bytt(indeks, j, j+1);}
+                if (a[indeks[j+1]] > a[indeks[j+2]]) {bytt(indeks, j, j+2);};
+                if (a[indeks[j]] > a[indeks[j+1]]){ bytt(indeks,j,j+1);}
+
+            }
+
+
+        }
+        return indeks;
     }
 
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
+        int n = a.length;
+
+        if (a.length < 3) {
+            throw  new IllegalArgumentException("a.length("+a.length+")<3!");
+        }
         throw new UnsupportedOperationException();
     }
+
+
 
     ///// Oppgave 10 //////////////////////////////////////
     public static int bokstavNr(char bokstav) {

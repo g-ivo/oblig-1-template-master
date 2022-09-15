@@ -122,6 +122,18 @@ public class Oblig1 {
 
         char[] c = new char[s1.length + t1.length]; // opprettet tabell av riktig størrelse
         int i = 0, j= 0, k = 0; // løkkevariabler
+
+        while(i < s1.length && j < t1.length) {
+            c[k++] = s1[i++]; // først en verdi fra s1 inn i det nye arrayet
+            c[k++] = t1[j++]; // deretter en verdi fra t1
+        }
+
+        // dersom det ene arrayet er lenger enn det andre, vil kun en av disse while løkkene anvendes for å
+        // fylle ut de resterende verdiene i det lengste arrayet
+        while(i < s1.length) c[k++] = s1[i++];
+        while (j < t1.length) c[k++] = t1[j++];
+
+        return String.valueOf(c);
     }
 
     /// 7b)

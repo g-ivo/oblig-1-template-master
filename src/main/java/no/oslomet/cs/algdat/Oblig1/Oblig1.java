@@ -133,12 +133,13 @@ public class Oblig1 {
         while(i < s1.length) c[k++] = s1[i++];
         while (j < t1.length) c[k++] = t1[j++];
 
-        return String.valueOf(c);
+        String string = new String(c); // omdanner arrayet til streng
+        return string;
     }
 
     /// 7b)
     public static String flett(String... s) {
-        throw new UnsupportedOperationException();
+        int n = 0;
     }
 
     ///// Oppgave 8 //////////////////////////////////////

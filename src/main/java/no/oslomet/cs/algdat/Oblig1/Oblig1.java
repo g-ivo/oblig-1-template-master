@@ -294,7 +294,8 @@ public class Oblig1 {
     }
 
     ///// Oppgave 8 //////////////////////////////////////
-
+    // tenkte feil har ikke opprettet en ny tabell med sortert indeks for de minste verdiene
+    //har foreløpig kun sortert verdiene i tabellen
 
     public static int[] indekssortering(int[] a) {
         int[] indeks = new int[a.length];
@@ -302,7 +303,7 @@ public class Oblig1 {
             indeks[i]=a[i];
         }
         for (int i = 0; i < indeks.length; i++) {
-            for (int j = 0; j < a.length; j++) {
+            for (int j = 0; j < indeks.length; j++) {
                 if (indeks[i] < indeks[j]) {
                     int temp = indeks[j];
                     indeks[j] = indeks[i];

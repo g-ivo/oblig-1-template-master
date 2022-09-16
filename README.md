@@ -74,16 +74,17 @@ tabellen s, så looper vi gjennom ord fra tabellen, og henter ut kun et tegn fra
 tilbake til den tomme variabelen c (tidligere laget med stringbuilder), som vi returnerer som en string via metoden 
 toString.
 
-I oppgave 8 så skal vi returnere indeksposisjone til tabellen array, dog sortert etter stigende verdistørrelse. Jeg
+I oppgave 8 så skal vi returnere indeksposisjone til tabellen array, dog sortert etter stigende verdistørrelse. Vi
 startet først med å opprette en tom tabell med lengden til array a som skal inneholde indeksposisjonene til det 
-endelige arrayet. Deretter opprettet jeg nok en tabell som først skulle sortere verdiene til array a i stigende
-rekkefølge. Sorteringen gjøres gjennom for løkker of if setninger. Når jeg hadde sortert ferdig, så ønsket jeg å 
-finne indeksposisjonene til de sorterte verdiene i tabellen a. Dette klarte jeg ved bruk av doble for løkker med en 
-if setning som gjorde  utslag når verdiSort[i] == a[j]. Når jeg hadde funnet ineksposisjonene til de minste verdiene i 
-arrayet a via variabelen j, så la jeg verdiene til variablen j inn i det nyopprettede arrayet indeks. Deretter
-returnerte jeg arrayet indeks. 
+endelige arrayet. Deretter opprettet vi nok en tabell som først skulle sortere verdiene til array a i stigende
+rekkefølge. Sorteringen gjøres gjennom for løkker of if setninger. Når vi hadde sortert ferdig, så ønsket vi å 
+finne indeksposisjonene til de sorterte verdiene i tabellen a. Dette klarte vi ved bruk av doble for løkker med en 
+if setning som gjorde  utslag når verdiSort[i] == a[j]. Når vi hadde funnet ineksposisjonene til de minste verdiene i 
+arrayet a via variabelen j, så la vi verdiene til variablen j inn i det nyopprettede arrayet indeks. Deretter
+returnerte vi arrayet indeks. 
 
-I oppgave 9
+I oppgave 9 så finner vi indeksposisjonene til de tre minste verdiene i array: a. Vi starter med å initialisere
+variablene n til tabellen a sin lengde, og vi får feilmelding dersom tabellen inneholder mindre enn 3 tall.
 
 I oppgave 10 startet vi med å definere hver bokstav telling for både streng A og B. I dette utgangspunktet teller man 
 opp bokstavene etter hvor mange ganger de befinner seg i ordet. Dette fant vi ved å lage en for-løkke med en if 

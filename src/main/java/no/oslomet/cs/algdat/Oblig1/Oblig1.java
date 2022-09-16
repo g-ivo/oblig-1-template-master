@@ -5,6 +5,7 @@ package no.oslomet.cs.algdat.Oblig1;
 import java.lang.UnsupportedOperationException;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
+import java.util.Random;
 
 
 public class Oblig1 {
@@ -67,6 +68,29 @@ public class Oblig1 {
          */
 
     }
+
+    public static void bytt(int[] a, int i, int j){
+        int temp = a[i]; a[i] = a[j]; a[j] = temp;
+    }
+
+    public static int[] randPerm(int n){
+        Random r = new Random();
+        int[] a = new int[n];
+
+        Arrays.setAll(a, i -> i + 1);
+
+        for(int k = n - 1; k > 0; k--){
+            int i = r.nextInt(k + 1);
+            bytt (a, k, i);
+        }
+        return a;
+    }
+
+    public static void main(String[] args){
+        int n = 100_000;
+        System.out.println(maks(randPerm(n)));
+    }
+
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {

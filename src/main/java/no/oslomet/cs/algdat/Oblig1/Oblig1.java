@@ -56,16 +56,7 @@ public class Oblig1 {
         c) Hvor mange blir det i gjennomsnitt?: Hn ≈ log(n) + 0,577 er formelen for å finne det harmoniske tallet som
         brukes for å finne gjennomsnittet Hn-1. Hvis n er lik 100.000 blir log(n) - 0,423 tilnærmet lik 11.1.
 
-        var array1 = new int[] {9, 2, 6, 4, 7, 3, 1, 5, 8};
-        maks(array1);
-
-        var array2 = new int[] {4, 1, 3, 5, 6, 7, 8, 2, 9};
-        maks(array2);
-
-        var array3 = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        maks(array3);
-
-         */
+       */
 
     }
 

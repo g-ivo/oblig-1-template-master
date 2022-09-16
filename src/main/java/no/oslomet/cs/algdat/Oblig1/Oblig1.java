@@ -60,6 +60,8 @@ public class Oblig1 {
 
     }
 
+    //bytt og randPerm er kopiert fra kompendie 1.1.8.
+
     public static void bytt(int[] a, int i, int j){
         int temp = a[i]; a[i] = a[j]; a[j] = temp;
     }

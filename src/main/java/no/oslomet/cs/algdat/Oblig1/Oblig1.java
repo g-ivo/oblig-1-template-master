@@ -321,6 +321,7 @@ public class Oblig1 {
     }
 
     ///// Oppgave 9 //////////////////////////////////////
+    // brukt programkode fra 1.2.5 oppgave 4 i kompendiet
     public static int[] tredjeMin(int[] a) {
 
         int n = a.length; // tabellens lengde
@@ -381,10 +382,10 @@ public class Oblig1 {
                 }
             }
         }
-        return new int[]{m, nm, tm};
+        int [] indekser = {m, nm, tm};
+        indekssortering(indekser);
 
-
-
+        return indekser;
 
     }
 

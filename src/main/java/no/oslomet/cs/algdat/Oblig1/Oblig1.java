@@ -298,20 +298,22 @@ public class Oblig1 {
     //har foreløpig kun sortert verdiene i tabellen
 
     public static int[] indekssortering(int[] a) {
-        int[] indeks = new int[a.length];
+        int[] indeks= new int[a.length];
+        int[] verdiSort = new int[a.length];
         for (int i = 0; i <a.length ; i++) {
-            indeks[i]=a[i];
+            verdiSort[i]=a[i];
         }
-        for (int i = 0; i < indeks.length; i++) {
-            for (int j = 0; j < indeks.length; j++) {
-                if (indeks[i] < indeks[j]) {
-                    int temp = indeks[j];
-                    indeks[j] = indeks[i];
-                    indeks[i] = temp;
+        for (int i = 0; i < verdiSort.length; i++) {
+            for (int j = 0; j < verdiSort.length; j++) {
+                if (verdiSort[i] < verdiSort[j]) {
+                    int temp = verdiSort[j];
+                    verdiSort[j] = verdiSort[i];
+                    verdiSort[i] = temp;
                 }
             }
         }
-        return indeks;
+        return indeks; // returnerer array med verdier som inneholder indeksposisjonene sortert fra minste verdi
+                       // i arrayet: a
     }
 
     ///// Oppgave 9 //////////////////////////////////////

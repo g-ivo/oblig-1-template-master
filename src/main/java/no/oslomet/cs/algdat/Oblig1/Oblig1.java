@@ -328,9 +328,62 @@ public class Oblig1 {
             throw new NoSuchElementException("a.length(" + n +")< 3");
         }
 
-        int m = 0; // posisjonen til minste verdi
-        int mm = 1; // posisjonene til nest minste verdi
-        int mmm = 2; // posisjonen til den tredje minste verdien
+        int m = 0;
+        int nm = 1;
+        int tm = 2;
+
+        if (a[nm] < a[m]) {
+            m = 1;
+            nm = 0;
+        }
+
+        if (a[tm] < a[m]) {
+            int temp = tm;
+            tm = m;
+            m = temp;
+        }
+
+        if (a[tm] < a[nm]) {
+            int temp = tm;
+            tm = nm;
+            nm = temp;
+        }
+
+        int minVerdi = a[m];
+        int nestMinVerdi = a[nm];
+        int tredjeMInVerdi = a[tm];
+
+        for (int i = 3; i < n; i++) {
+            int verdi = a[i];
+
+            if (verdi < tredjeMInVerdi) {
+                if (verdi < nestMinVerdi) {
+                    if (verdi < minVerdi) {
+                        tm = nm;
+                        tredjeMInVerdi = nestMinVerdi;
+
+                        nm = m;
+                        nestMinVerdi = minVerdi;
+
+                        m = i;
+                        minVerdi = verdi;
+                    }
+                    else {
+                        tm = nm;
+                        tredjeMInVerdi = nestMinVerdi;
+
+                        nm = i;
+                        nestMinVerdi = verdi;
+                    }
+                } else {
+                    tm = i;
+                    tredjeMInVerdi = verdi;
+                }
+            }
+        }
+        return new int[]{m, nm, tm};
+
+
 
 
     }

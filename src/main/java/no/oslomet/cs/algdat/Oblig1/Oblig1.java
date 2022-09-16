@@ -299,13 +299,22 @@ public class Oblig1 {
     public static int[] indekssortering(int[] a) {
         int[] indeks = new int[a.length];
         for (int i = 0; i <a.length ; i++) {
-            indeks[i]=i;
+            indeks[i]=a[i];
         }
+        for (int i = 0; i < indeks.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                if (indeks[i] > indeks[j]) {
+                    int temp = indeks[j];
+                    indeks[j] = indeks[i];
+                    indeks[i] = temp;
+                }
+            }
+        }return indeks;
     }
 
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
-
+        throw new UnsupportedOperationException();
     }
 
     ///// Oppgave 10 //////////////////////////////////////

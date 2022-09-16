@@ -294,74 +294,14 @@ public class Oblig1 {
     }
 
     ///// Oppgave 8 //////////////////////////////////////
-    private static void bytt(int[] a, int i, int j)
-    { int temp = a[i]; a[i] = a[j]; a[j] = temp; }
+
 
     public static int[] indekssortering(int[] a) {
-        int[] indeks = new int[a.length];
-        for (int i = 0; i <a.length ; i++) {
-            indeks[i]=i;
-        }
 
-        for (int i = 0; i < a.length-2; i++) {
-            for (int j = 0; j < indeks.length-2; j++) {
-                if (a[indeks[j]] > a[indeks[j+1]]){ bytt(indeks, j, j+1);}
-                if (a[indeks[j+1]] > a[indeks[j+2]]) {bytt(indeks, j, j+2);};
-                if (a[indeks[j]] > a[indeks[j+1]]){ bytt(indeks,j,j+1);}
-
-            }
-
-
-        }
-        return indeks;
     }
 
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
-        int n = a.length;
-        if (n<3){
-            throw new NoSuchElementException("a.length(" + n +")< 3");
-        }
-
-        int indeks[] = new int[0];
-
-        int m = indeks[0];
-        int nm = indeks[1];
-        int tnm = indeks[2];
-
-        int mv = indeks[m];
-        int nmv = indeks[nm];
-        int tnmv = indeks[tnm];
-
-        for (int i = 3; i <indeks.length ; i++) {
-            int verdi = a[i];
-
-            if(verdi<tnmv&&verdi<nmv&&verdi<mv){
-                tnm = nm;
-                tnmv=nmv;
-
-                nm = m;
-                nmv = mv;
-
-                m= i;
-                mv = verdi;
-            }
-            else if(verdi<nmv&&verdi>=mv){
-                tnm = nm;
-                tnmv = nmv;
-
-                nm = i;
-                nmv=verdi;
-            }
-
-            else if(verdi<tnmv&&verdi>=nmv){
-                tnm=i;
-                tnmv=verdi;
-            }
-
-
-        }
-        return new int[]{m,nm,tnm};
 
     }
 

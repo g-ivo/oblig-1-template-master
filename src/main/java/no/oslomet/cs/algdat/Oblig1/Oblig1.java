@@ -294,17 +294,15 @@ public class Oblig1 {
     }
 
     ///// Oppgave 8 //////////////////////////////////////
-    // tenkte feil har ikke opprettet en ny tabell med sortert indeks for de minste verdiene
-    //har foreløpig kun sortert verdiene i tabellen
 
     public static int[] indekssortering(int[] a) {
-        int[] indeks= new int[a.length];
-        int[] verdiSort = new int[a.length];
-        for (int i = 0; i <a.length ; i++) {
+        int[] indeks= new int[a.length]; // oppretter tomt array for indeks-tabell
+        int[] verdiSort = new int[a.length]; // oppretter tomt array for sortert verdi-tabell
+        for (int i = 0; i <a.length ; i++) { // legger inn verdiene fra tabellen a til verdiSort
             verdiSort[i]=a[i];
         }
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length; j++) {
+        for (int i = 0; i < a.length; i++) { // sorterer verdiene fra minst til størst gjennom dobbel bruk av
+            for (int j = 0; j < a.length; j++) { // for løkker og if setninger
                 if (verdiSort[i] < verdiSort[j]) {
                     int temp = verdiSort[j];
                     verdiSort[j] = verdiSort[i];
@@ -312,15 +310,15 @@ public class Oblig1 {
                 }
             }
         }
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length; j++) {
-                if (verdiSort[i] == a[j]) {
-                    indeks[i] = j;
+        for (int i = 0; i < a.length; i++) { // setter inn de opprinnelige indeksposisjonene til verdiene i tabell a
+            for (int j = 0; j < a.length; j++) { // i den nye tabellen indeks
+                if (verdiSort[i] == a[j]) { // denne gangen er indeksposisjonene verdiene til tabellen indeks
+                    indeks[i] = j; // verdiene er sortert på bakgrunn av minste til største verdi fra tabell a
                 }
             }
         }
-        return indeks; // returnerer array med verdier som inneholder indeksposisjonene sortert fra minste verdi
-                       // i arrayet: a
+        return indeks; // returnerer array med sorterte indeksposisjoner etter stigende verdistørrelse fra opprinnelig
+        // array a
     }
 
     ///// Oppgave 9 //////////////////////////////////////

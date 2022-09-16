@@ -61,7 +61,18 @@ k blir positiv også gjør nesten det samme som med positiv k, men isteden for �
 de første k verdier og flytter resten av elementene til venstre. Til slutt setter vi hjelpetabellen inn i slutten
 av parametertabellen.
 
-I oppgave 7
+I oppgave 7a så gikk vi frem med å gjøre om strengene s og t til et char array. Deretter opprettet vi en ny tabell med 
+riktig lengde/størrelse. Vi foret deretter den nye tabellen med char gjennom å gi den en annenhver verdi fra s og t via
+en while løkke som aktiveres når de to tellerne til tabellen s og t er mindre enn lengden på de respektive arrayene. 
+Hvis arrayene s og t hadde forskjellig lengde, kjørte vi to nye while løkker separat som hentet ut resterende char fra 
+arrayene. 
+
+I oppgave 7b så initialiserer vi først variabelen n til en default verdi som senere via en if else kondisjon og 
+for-løkke vil finne lengden til tabellen s. Deretter lager vi en tom variabel via metoden stringbuilder som kan motta
+enkelttegn eller char fra s. gjennom en while løkke som utløses når default variabelen teller er mindre enn lengden til 
+tabellen s, så looper vi gjennom ord fra tabellen, og henter ut kun et tegn fra hvert ord om gangen, som vi så sender
+tilbake til den tomme variabelen c (tidligere laget med stringbuilder), som vi returnerer som en string via metoden 
+toString.
 
 I oppgave 8
 

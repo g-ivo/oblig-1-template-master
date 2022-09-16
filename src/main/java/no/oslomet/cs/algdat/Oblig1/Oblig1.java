@@ -303,13 +303,14 @@ public class Oblig1 {
         }
         for (int i = 0; i < indeks.length; i++) {
             for (int j = 0; j < a.length; j++) {
-                if (indeks[i] > indeks[j]) {
+                if (indeks[i] < indeks[j]) {
                     int temp = indeks[j];
                     indeks[j] = indeks[i];
                     indeks[i] = temp;
                 }
             }
-        }return indeks;
+        }
+        return indeks;
     }
 
     ///// Oppgave 9 //////////////////////////////////////

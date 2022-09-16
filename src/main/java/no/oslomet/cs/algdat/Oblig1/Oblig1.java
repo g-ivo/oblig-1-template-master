@@ -28,6 +28,30 @@ public class Oblig1 {
         return a[a.length - 1]; //Returnerer verdien
     }
 
+    //bytt og randPerm er kopiert fra kompendie 1.1.8.
+
+    public static void bytt(int[] a, int i, int j){
+        int temp = a[i]; a[i] = a[j]; a[j] = temp;
+    }
+
+    public static int[] randPerm(int n){
+        Random r = new Random();
+        int[] a = new int[n];
+
+        Arrays.setAll(a, i -> i + 1);
+
+        for(int k = n - 1; k > 0; k--){
+            int i = r.nextInt(k + 1);
+            bytt (a, k, i);
+        }
+        return a;
+    }
+
+    public static void main(String[] args){
+        int n = 100;
+        System.out.println(ombyttinger(randPerm(n)));
+    }
+
     public static int ombyttinger(int[] a) {
         if (a.length <= 0){ //Returnerer feilmelding hvis tabellen er mindre eller lik 0
             throw new NoSuchElementException("Tabellen er tom!");
@@ -55,35 +79,11 @@ public class Oblig1 {
         en sortert tabell.
         c) Hvor mange blir det i gjennomsnitt?: Hn ≈ log(n) + 0,577 er formelen for å finne det harmoniske tallet som
         brukes for å finne gjennomsnittet Hn-1. Hvis n er lik 100.000 blir log(n) - 0,423 tilnærmet lik 11.1.
-
+        Bruker randPerm og bytt fra kompendiet for å teste gjennomsnittet av ombyttinger med vår egen maks-metode.
+        Hvis n=1000 blir gjennomsnittet vårt 998, n=100_000 blir det 99991 og av n=100 blir gjennomsnittet 96.
        */
 
     }
-
-    //bytt og randPerm er kopiert fra kompendie 1.1.8.
-
-    public static void bytt(int[] a, int i, int j){
-        int temp = a[i]; a[i] = a[j]; a[j] = temp;
-    }
-
-    public static int[] randPerm(int n){
-        Random r = new Random();
-        int[] a = new int[n];
-
-        Arrays.setAll(a, i -> i + 1);
-
-        for(int k = n - 1; k > 0; k--){
-            int i = r.nextInt(k + 1);
-            bytt (a, k, i);
-        }
-        return a;
-    }
-
-    public static void main(String[] args){
-        int n = 100_000;
-        System.out.println(maks(randPerm(n)));
-    }
-
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
@@ -108,21 +108,21 @@ public class Oblig1 {
 
     ///// Oppgave 3 //////////////////////////////////////
     public static int antallUlikeUsortert(int[] a) {
-        if (a.length == 0){
+        if (a.length == 0){ //Returnerer 0 hvis lengden på tabellen er lik 0
             return 0;
         }
 
-        var count2 = 1;
-        for (int i = 1; i < a.length; i++){
+        var count2 = 1; //Definerer variabel count2 som starter fra 1
+        for (int i = 1; i < a.length; i++){ //lager to for-løkker for å lagre og sammenligne
             var unique = true;
             for (int j = 0; j < i; j++){
-                if (a[i] == a[j]) {
+                if (a[i] == a[j]) { //Hvis de to tallene sammenlignet er like blir unique til false
                     unique = false;
-                    break;
+                    break; //Breaker for å kunne gå ut av for-løkken og kjøre på nytt
                 }
             }
             if (unique){
-                count2++;
+                count2++; //Teller for hver gang unique er true
             }
         }
 

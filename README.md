@@ -22,12 +22,17 @@ og måtte revurdere for-løkken. Det gikk ikke å lage to for-løkker og kom ogs
 lite effektiv kode.For å sjekke ombytting lagde vi først en vanlig maks-verdi kode, men rettet på å bruke den samme 
 for-løkken som fra første del av oppg1. Endret på oppgaven ved å lage en mye mer effektiv for-løkke som brukte mange 
 færre ombyttinger. Svarer også på de teoretiske spørsmålene her og i kildekoden:
-a) Når blir det flest ombyttinger?: Det blir flest ombyttinger når en tabell er usortert og desto nærmere det største 
-tallet er å stå først. En usortert tabell kan ha det største tallet hvor som helst i rekken og er derfor alltid 
-flere ombyttinger enn 1 eller 0.
-b) Når blir det færrest?: Det blir færrest ombyttinger når en tabell er sortert i stigende rekkefølge og si det 
-siste tallet står sist. Det er derfor ikke nødvendig med ombyttinger og blir derfor færrest i en sortert tabell.
-c) Hvor mange blir det i gjennomsnitt?: 
+
+a) Når blir det flest ombyttinger?: Det blir flest ombyttinger når en tabell er usortert og desto nærmere det
+største tallet er å stå fremst i tabellen. En usortert tabell kan ha det største tallet hvor som helst i rekken
+og er derfor alltid flere ombyttinger enn 1 eller 0.
+b) Når blir det færrest?: Det blir færrest ombyttinger når en tabell er sortert i stigende rekkefølge og si det
+siste tallet står sist eller nest sist. Det er derfor ikke nødvendig med ombyttinger og blir derfor færrest i
+en sortert tabell.
+c) Hvor mange blir det i gjennomsnitt?: Hn ≈ log(n) + 0,577 er formelen for å finne det harmoniske tallet som
+brukes for å finne gjennomsnittet Hn-1. Hvis n er lik 100.000 blir log(n) - 0,423 tilnærmet lik 11.1.
+Bruker randPerm og bytt fra kompendiet for å teste gjennomsnittet av ombyttinger med vår egen maks-metode.
+Hvis n=1000 blir gjennomsnittet vårt 998, n=100_000 blir det 99991 og av n=100 blir gjennomsnittet 96.
 
 I oppgave 2 så brukte vi en if statement for å sjekke om tallene har samme verdi. Vi la merke til at koden endrer på 
 arrayet og måtte derfor prøve en ny teknikk. Lagde også en return statement som returnerer 0 om lengden på tabellen 

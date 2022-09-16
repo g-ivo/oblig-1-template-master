@@ -53,7 +53,7 @@ public class Oblig1 {
         siste tallet står sist eller nest sist. Det er derfor ikke nødvendig med ombyttinger og blir derfor færrest i
         en sortert tabell.
         c) Hvor mange blir det i gjennomsnitt?: Hn ≈ log(n) + 0,577 er formelen for å finne det harmoniske tallet som
-        brukes for å finne gjennomsnittet Hn-1. 
+        brukes for å finne gjennomsnittet Hn-1. Hvis n er lik 100.000 blir log(n) - 0,423 tilnærmet lik 11.1.
 
         var array1 = new int[] {9, 2, 6, 4, 7, 3, 1, 5, 8};
         maks(array1);

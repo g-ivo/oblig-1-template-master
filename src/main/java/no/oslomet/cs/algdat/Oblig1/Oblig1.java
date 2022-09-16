@@ -323,7 +323,13 @@ public class Oblig1 {
 
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
-        throw new UnsupportedOperationException();
+
+        int n = a.length; // tabellens lengde
+        if (n<3){ // må ha minst tre verdier
+            throw new NoSuchElementException("a.length(" + n +")< 3");
+        }
+
+
     }
 
     ///// Oppgave 10 //////////////////////////////////////

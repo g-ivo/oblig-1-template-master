@@ -12,34 +12,34 @@ public class Oblig1 {
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
-        if (a.length <= 0){
+        if (a.length <= 0){ //Returnerer feilmelding hvis tabeller er mindre eller lik 0
             throw new NoSuchElementException("Tabellen er tom!");
         }
 
-        for(int i = 0, j = 1; j < a.length; i++, j++) {
-            if (a[i] > a[j]){
-                var maks = a[i];
-                a[i] = a[j];
-                a[j] = maks;
+        for(int i = 0, j = 1; j < a.length; i++, j++) { //Maks-metode med i og j. i blir j-1 og
+            if (a[i] > a[j]){ //Sammenligner, hvis i er større enn j
+                var maks = a[i]; //Definerer maks som a av i
+                a[i] = a[j]; //Hvis i er større enn j og siden i er før j bytter de plass
+                a[j] = maks; //j blir nye maks verdi
             }
         }
 
-        return a[a.length - 1];
+        return a[a.length - 1]; //Returnerer verdien
     }
 
     public static int ombyttinger(int[] a) {
-        if (a.length <= 0){
+        if (a.length <= 0){ //Returnerer feilmelding hvis tabellen er mindre eller lik 0
             throw new NoSuchElementException("Tabellen er tom!");
         }
 
-        var count = 0;
+        var count = 0; //Definerer count som starter på 0
 
         for(int i = 0, j = 1; j < a.length; i++, j++) {
             if (a[i] > a[j]){
                 var maks = a[i];
                 a[i] = a[j];
                 a[j] = maks;
-                count++;
+                count++; //+1 for hver gang i er større enn j og de bytter plass
             }
         }
 
@@ -53,7 +53,7 @@ public class Oblig1 {
         siste tallet står sist eller nest sist. Det er derfor ikke nødvendig med ombyttinger og blir derfor færrest i
         en sortert tabell.
         c) Hvor mange blir det i gjennomsnitt?: Hn ≈ log(n) + 0,577 er formelen for å finne det harmoniske tallet som
-        brukes for å finne gjennomsnittet Hn-1.
+        brukes for å finne gjennomsnittet Hn-1. 
 
         var array1 = new int[] {9, 2, 6, 4, 7, 3, 1, 5, 8};
         maks(array1);
@@ -70,13 +70,13 @@ public class Oblig1 {
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
-        for (int i = 1; i < a.length; i++) {
-            if (a[i] < a[i - 1]) {
+        for (int i = 1; i < a.length; i++) { //Returnerer feilmelding hvis tabellen ikke er sortert
+            if (a[i] < a[i - 1]) { //Sjekker om a[1] er mindre enn a[0], hvis den ikke er det viser det at den ikke er sortert i stigende rekkefølge
                 throw new IllegalStateException("Ikke sortert!");
             }
         }
 
-        if (a.length == 0) {
+        if (a.length == 0) { //Returnerer 0 hvis
             return 0;
         }
 

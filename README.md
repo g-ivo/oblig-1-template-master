@@ -30,12 +30,12 @@ siste tallet står sist. Det er derfor ikke nødvendig med ombyttinger og blir d
 c) Hvor mange blir det i gjennomsnitt?: 
 
 I oppgave 2 så brukte vi en if statement for å sjekke om tallene har samme verdi. Vi la merke til at koden endrer på 
-arrayet og måtte derfor prøve en ny teknikk.Lagde også en return statement som returnerer 0 om lengden på tabellen 
+arrayet og måtte derfor prøve en ny teknikk. Lagde også en return statement som returnerer 0 om lengden på tabellen 
 også er 0. Lagde en for-løkke som sjekker om det "andre" tallet er ulikt fra tallet før den selv. Hvis tallene er ulike 
 legger vi til 1 i count og går gjennom løkken til hele tabellen er gått gjennom. Så returnerer man count.
 
 I oppgave 3 gikk vi fram ved å først bruke samme metode som i oppgave 2, men brukte litt tid på å skjønne hva man 
-skal endre siden oppgave 3 baserer seg på en usortert tabell. Lagde en lik if statement som i oppgave 2 hvor vi 
+skal endres siden oppgave 3 baserer seg på en usortert tabell. Lagde en lik if statement som i oppgave 2 hvor vi 
 returnerer 0 hvis tabellen har en størrelse på 0. Lager i denne oppgaven to for-løkker for å sammenligne og lagre 
 tallene. Definerer også en "unique" variabel som true. Med en if-statement finner vi om det "andre"[1] tallet er likt 
 som det forrige tallet[0]. Hvis tallene er like blir "unique" like false og vi breaker for å gå ut av den andre 

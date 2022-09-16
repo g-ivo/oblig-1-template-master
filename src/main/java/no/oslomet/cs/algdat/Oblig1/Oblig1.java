@@ -237,39 +237,35 @@ public class Oblig1 {
 
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
+    // kode til oppgaven er hentet fra kompendium  avsnitt 1.3.11
     public static String flett(String s, String t) {
-        // kode til oppgaven er hentet fra kompendium  avsnitt 1.3.11
-        char[] s1 = s.toCharArray(); // gjør om til et char-array
-        char[] t1 = s.toCharArray();
+        char[] s1 = s.toCharArray();        // gjør om til et char-array
+        char[] t1 = t.toCharArray();
 
-        char[] c = new char[s1.length + t1.length]; // opprettet tabell av riktig størrelse
-        int i = 0, j= 0, k = 0; // løkkevariabler
+        char[] c = new char[(s1.length + t1.length)]; // opprettet tabell av riktig størrelse
+        int i = 0, j = 0, k = 0; // løkkevariabler
 
-        while(i < s1.length && j < t1.length) {
+        while (i < s1.length && j < t1.length) {
             c[k++] = s1[i++]; // først en verdi fra s1 inn i det nye arrayet
             c[k++] = t1[j++]; // deretter en verdi fra t1
         }
 
         // dersom det ene arrayet er lenger enn det andre, vil kun en av disse while løkkene anvendes for å
         // fylle ut de resterende verdiene i det lengste arrayet
-        while(i < s1.length) c[k++] = s1[i++];
+        while (i < s1.length) c[k++] = s1[i++];
         while (j < t1.length) c[k++] = t1[j++];
 
         String string = new String(c); // omdanner arrayet til streng
         return string;
-
-
-        throw new UnsupportedOperationException();
     }
 
     /// 7b)
     public static String flett(String... s) {
-
-        int n = 0;
-        if (s.length == 0;) {
+        int n = 0; // n initialiseres til default verdi og vil tilsvare lengden til den lengste strengen
+        if (s.length == 0) { // i tilfelle tom tabell
             n = 0;
-        } else {
-            n = s[0].length();
+        } else{
+            n = s[0].length(); // finner lengden til s og kjører løkke gjennom s, n ganger
             for (int i = 0; i < s.length; i++) {
                 if (n < s[i].length()) {
                     n = s[i].length();
@@ -277,7 +273,24 @@ public class Oblig1 {
             }
         }
 
-        throw new UnsupportedOperationException();
+        StringBuilder c = new StringBuilder(); //tom variabel som mottar char fra s
+        int teller = 0; //default initialisering av teller
+
+        //while-løkke som aktiveres for ubrukte char
+        while (teller < n) {
+            for (int i = 0; i < s.length; i++) { //looper gjennom ord fra tabellen s
+                char[] ord = s[i].toCharArray(); //gjør om til streng fra char-array
+                if (ord.length != 0) { //alle strenger som ikke er tomme
+                    for (int j = teller; j < s[i].length(); j++) { //looper gjennom char i hvert ord
+                        c.append(ord[j]);                          //legger til char i ord-variabelen
+                        break; //kun en char fra hvert ord
+                    }
+                }
+            }
+            teller++; // øker teller med 1
+
+        }
+        return c.toString(); //gjør om alle flettede char til en string
     }
 
     ///// Oppgave 8 //////////////////////////////////////

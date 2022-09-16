@@ -329,10 +329,11 @@ public class Oblig1 {
             throw new NoSuchElementException("a.length(" + n +")< 3");
         }
 
-        int m = 0;
-        int nm = 1;
-        int tm = 2;
+        int m = 0; //posisjonen til den minste verdien
+        int nm = 1; //...den nest minste verdien
+        int tm = 2; //...den tredje minste verdien
 
+        // bytter om rekkefølger på verdiene, slik at vi får riktig rekkefølge henhold til minste verdi.
         if (a[nm] < a[m]) {
             m = 1;
             nm = 0;
@@ -350,9 +351,9 @@ public class Oblig1 {
             nm = temp;
         }
 
-        int minVerdi = a[m];
-        int nestMinVerdi = a[nm];
-        int tredjeMInVerdi = a[tm];
+        int minVerdi = a[m]; // minste verdi
+        int nestMinVerdi = a[nm]; // nest minste verdi
+        int tredjeMInVerdi = a[tm]; // tredje minste verdi
 
         for (int i = 3; i < n; i++) {
             int verdi = a[i];
@@ -382,10 +383,11 @@ public class Oblig1 {
                 }
             }
         }
-        int [] indekser = {m, nm, tm};
-        indekssortering(indekser);
+        int [] indekser = {m, nm, tm}; // lager et array med de tre minste verdiene
+        indekssortering(indekser); // array kjøres gjennom for indekssortering
 
         return indekser;
+
 
     }
 

@@ -329,6 +329,10 @@ public class Oblig1 {
             throw new NoSuchElementException("a.length(" + n +")< 3");
         }
 
+        int m = 0; // posisjonen til minste verdi
+        int mm = 1; // posisjonene til nest minste verdi
+        int mmm = 2; // posisjonen til den tredje minste verdien
+
 
     }
 

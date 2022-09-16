@@ -84,7 +84,10 @@ arrayet a via variabelen j, så la vi verdiene til variablen j inn i det nyoppre
 returnerte vi arrayet indeks. 
 
 I oppgave 9 så finner vi indeksposisjonene til de tre minste verdiene i array: a. Vi starter med å initialisere
-variablene n til tabellen a sin lengde, og vi får feilmelding dersom tabellen inneholder mindre enn 3 tall.
+variablene n til tabellen a sin lengde, og vi får feilmelding dersom tabellen inneholder mindre enn 3 tall. Deretter
+bytter vi rekkefølge på verdier, via if setninger og kjører dem gjennom for løkker for å få ut verdiene i riktig
+rekkefølge henhold til minste verdi. Etter at sorteringen av verdier er ferdig, så oppretter vi array med de tre minste
+verdiene, og deretter kjører den gjennom metoden indekssortering fra oppgave 8, for så å returnere arrayet.
 
 I oppgave 10 startet vi med å definere hver bokstav telling for både streng A og B. I dette utgangspunktet teller man 
 opp bokstavene etter hvor mange ganger de befinner seg i ordet. Dette fant vi ved å lage en for-løkke med en if 

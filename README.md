@@ -61,9 +61,27 @@ k blir positiv også gjør nesten det samme som med positiv k, men isteden for �
 de første k verdier og flytter resten av elementene til venstre. Til slutt setter vi hjelpetabellen inn i slutten
 av parametertabellen.
 
-I oppgave 7
+I oppgave 7a så gikk vi frem med å gjøre om strengene s og t til et char array. Deretter opprettet vi en ny tabell med 
+riktig lengde/størrelse. Vi foret deretter den nye tabellen med char gjennom å gi den en annenhver verdi fra s og t via
+en while løkke som aktiveres når de to tellerne til tabellen s og t er mindre enn lengden på de respektive arrayene. 
+Hvis arrayene s og t hadde forskjellig lengde, kjørte vi to nye while løkker separat som hentet ut resterende char fra 
+arrayene. 
 
-I oppgave 8
+I oppgave 7b så initialiserer vi først variabelen n til en default verdi som senere via en if else kondisjon og 
+for-løkke vil finne lengden til tabellen s. Deretter lager vi en tom variabel via metoden stringbuilder som kan motta
+enkelttegn eller char fra s. gjennom en while løkke som utløses når default variabelen teller er mindre enn lengden til 
+tabellen s, så looper vi gjennom ord fra tabellen, og henter ut kun et tegn fra hvert ord om gangen, som vi så sender
+tilbake til den tomme variabelen c (tidligere laget med stringbuilder), som vi returnerer som en string via metoden 
+toString.
+
+I oppgave 8 så skal vi returnere indeksposisjone til tabellen array, dog sortert etter stigende verdistørrelse. Jeg
+startet først med å opprette en tom tabell med lengden til array a som skal inneholde indeksposisjonene til det 
+endelige arrayet. Deretter opprettet jeg nok en tabell som først skulle sortere verdiene til array a i stigende
+rekkefølge. Sorteringen gjøres gjennom for løkker of if setninger. Når jeg hadde sortert ferdig, så ønsket jeg å 
+finne indeksposisjonene til de sorterte verdiene i tabellen a. Dette klarte jeg ved bruk av doble for løkker med en 
+if setning som gjorde  utslag når verdiSort[i] == a[j]. Når jeg hadde funnet ineksposisjonene til de minste verdiene i 
+arrayet a via variabelen j, så la jeg verdiene til variablen j inn i det nyopprettede arrayet indeks. Deretter
+returnerte jeg arrayet indeks. 
 
 I oppgave 9
 

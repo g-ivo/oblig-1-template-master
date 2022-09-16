@@ -297,7 +297,10 @@ public class Oblig1 {
 
 
     public static int[] indekssortering(int[] a) {
-
+        int[] indeks = new int[a.length];
+        for (int i = 0; i <a.length ; i++) {
+            indeks[i]=i;
+        }
     }
 
     ///// Oppgave 9 //////////////////////////////////////

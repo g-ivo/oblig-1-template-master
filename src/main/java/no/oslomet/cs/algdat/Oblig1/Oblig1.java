@@ -303,12 +303,19 @@ public class Oblig1 {
         for (int i = 0; i <a.length ; i++) {
             verdiSort[i]=a[i];
         }
-        for (int i = 0; i < verdiSort.length; i++) {
-            for (int j = 0; j < verdiSort.length; j++) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
                 if (verdiSort[i] < verdiSort[j]) {
                     int temp = verdiSort[j];
                     verdiSort[j] = verdiSort[i];
                     verdiSort[i] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                if (verdiSort[i] == a[j]) {
+                    indeks[i] = j;
                 }
             }
         }
